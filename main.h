@@ -8,7 +8,7 @@
 #include <stdlib.h>
 #include <ctype.h>
 #include <stdarg.h>
-#define DELIM " \t\n"
+#define DELIM "$ \t\n"
 
 typedef struct stack_s
 {
@@ -39,6 +39,5 @@ void swap_t(stack_t **stack, unsigned int line_number);
 void add_t(stack_t **stack, unsigned int line_number);
 void sub_t(stack_t **stack, unsigned int line_number);
 void div_tt(stack_t **stack, unsigned int line_number);
-
 
 #endif
