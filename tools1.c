@@ -45,13 +45,6 @@ void find_func(char *str_1, char *str_2, int line_number, int status)
         {"add", add_t},
         {"sub", sub_t},
         {"div", div_tt},
-        /*
-        {"mul", mul_nodes},
-        {"mod", mod_nodes},
-        {"pchar", print_char},
-        {"pstr", print_str},
-        {"rotl", rotl},
-        {"rotr", rotr},*/
         {NULL, NULL}};
 
     if (str_1[0] == '#')
@@ -117,6 +110,10 @@ void call_fun(op_func func, char *str_1, char *str_2, int line_number, int statu
         {
             Queue(&node, line_number);
         }
+    }
+    else if (strcmp(str_1, "pall$") == 0)
+    {
+        func(&head, line_number);
     }
     else
     {
